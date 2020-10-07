@@ -1,0 +1,36 @@
+[debug] [2018-03-09T17:08:54.076Z] ----------------------------------------------------------------------
+[debug] [2018-03-09T17:08:54.079Z] Command:       /usr/local/bin/node /usr/local/bin/firebase deploy
+[debug] [2018-03-09T17:08:54.080Z] CLI Version:   3.16.0
+[debug] [2018-03-09T17:08:54.080Z] Platform:      darwin
+[debug] [2018-03-09T17:08:54.080Z] Node Version:  v8.9.0
+[debug] [2018-03-09T17:08:54.080Z] Time:          Fri Mar 09 2018 09:08:54 GMT-0800 (PST)
+[debug] [2018-03-09T17:08:54.080Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-03-09T17:08:54.098Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-03-09T17:08:54.098Z] > authorizing via signed-in user
+[debug] [2018-03-09T17:08:54.102Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/reactdatavisualization  
+  
+ Fri Mar 09 2018 09:08:54 GMT-0800 (PST)
+[debug] [2018-03-09T17:08:54.545Z] <<< HTTP RESPONSE 200
+[debug] [2018-03-09T17:08:54.546Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/reactdatavisualization/tokens  
+  
+ Fri Mar 09 2018 09:08:54 GMT-0800 (PST)
+[debug] [2018-03-09T17:08:55.236Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'reactdatavisualization'...
+[info] 
+[info] i  deploying database, storage, functions, hosting
+[info] i  functions: running predeploy script.
+[debug] [2018-03-09T17:08:55.558Z] TypeError: "file" argument must be a non-empty string
+    at normalizeSpawnArguments (child_process.js:383:11)
+    at Object.exports.spawn (child_process.js:496:38)
+    at /usr/local/lib/node_modules/firebase-tools/lib/deploy/lifecycleHooks.js:21:27
+    at initializePromise (/usr/local/lib/node_modules/firebase-tools/node_modules/rsvp/dist/rsvp.js:567:5)
+    at new Promise (/usr/local/lib/node_modules/firebase-tools/node_modules/rsvp/dist/rsvp.js:1039:33)
+    at /usr/local/lib/node_modules/firebase-tools/lib/deploy/lifecycleHooks.js:20:12
+    at _chain (/usr/local/lib/node_modules/firebase-tools/lib/deploy/index.js:23:45)
+    at /usr/local/lib/node_modules/firebase-tools/lib/deploy/index.js:26:14
+    at tryCatch (/usr/local/lib/node_modules/firebase-tools/node_modules/rsvp/dist/rsvp.js:525:12)
+    at invokeCallback (/usr/local/lib/node_modules/firebase-tools/node_modules/rsvp/dist/rsvp.js:538:13)
+[error] 
+[error] Error: An unexpected error has occurred.

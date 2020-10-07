@@ -1,0 +1,1139 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/components/Login.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">All files</a> / <a href="index.html">src/components</a> Login.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>0/170</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/26</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/12</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>0/170</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247
+248
+249
+250
+251
+252
+253
+254
+255
+256
+257
+258
+259
+260
+261
+262
+263
+264
+265
+266
+267
+268
+269
+270
+271
+272
+273
+274
+275
+276
+277
+278
+279
+280
+281
+282
+283
+284
+285
+286
+287
+288
+289
+290
+291
+292
+293
+294
+295
+296
+297
+298
+299
+300
+301
+302
+303
+304
+305
+306
+307
+308
+309
+310
+311
+312
+313
+314
+315
+316
+317
+318
+319
+320
+321
+322
+323
+324
+325
+326
+327
+328
+329
+330
+331
+332
+333
+334
+335
+336
+337
+338
+339
+340
+341
+342
+343
+344
+345
+346
+347
+348
+349
+350
+351
+352
+353
+354
+355
+356
+357
+358
+359</td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">var email = document.quer<span class="cstat-no" title="statement not covered" >ySelector("#email"),</span>
+  password <span class="cstat-no" title="statement not covered" >= document.querySelector("#password"</span>),
+  mySVG <span class="cstat-no" title="statement not covered" >= document.querySelector(".svgContainer"</span>),
+  armL <span class="cstat-no" title="statement not covered" >= document.querySelector(".armL"</span>),
+  armR <span class="cstat-no" title="statement not covered" >= document.querySelector(".armR"</span>),
+  eyeL <span class="cstat-no" title="statement not covered" >= document.querySelector(".eyeL"</span>),
+  eyeR <span class="cstat-no" title="statement not covered" >= document.querySelector(".eyeR"</span>),
+  nose <span class="cstat-no" title="statement not covered" >= document.querySelector(".nose"</span>),
+  mouth <span class="cstat-no" title="statement not covered" >= document.querySelector(".mouth"</span>),
+  mouthBG <span class="cstat-no" title="statement not covered" >= document.querySelector(".mouthBG"</span>),
+  mouthSmallBG <span class="cstat-no" title="statement not covered" >= document.querySelector(".mouthSmallBG"</span>),
+  mouthMediumBG <span class="cstat-no" title="statement not covered" >= document.querySelector(".mouthMediumBG"</span>),
+  mouthLargeBG <span class="cstat-no" title="statement not covered" >= document.querySelector(".mouthLargeBG"</span>),
+  mouthMaskPath <span class="cstat-no" title="statement not covered" >= document.querySelector("#mouthMaskPath"</span>),
+  mouthOutline <span class="cstat-no" title="statement not covered" >= document.querySelector(".mouthOutline"</span>),
+  tooth <span class="cstat-no" title="statement not covered" >= document.querySelector(".tooth"</span>),
+  tongue <span class="cstat-no" title="statement not covered" >= document.querySelector(".tongue"</span>),
+  chin <span class="cstat-no" title="statement not covered" >= document.querySelector(".chin"</span>),
+  face <span class="cstat-no" title="statement not covered" >= document.querySelector(".face"</span>),
+  eyebrow <span class="cstat-no" title="statement not covered" >= document.querySelector(".eyebrow"</span>),
+  outerEarL <span class="cstat-no" title="statement not covered" >= document.querySelector(".earL .outerEar"</span>),
+  outerEarR <span class="cstat-no" title="statement not covered" >= document.querySelector(".earR .outerEar"</span>),
+  earHairL <span class="cstat-no" title="statement not covered" >= document.querySelector(".earL .earHair"</span>),
+  earHairR <span class="cstat-no" title="statement not covered" >= document.querySelector(".earR .earHair"</span>),
+  hair <span class="cstat-no" title="statement not covered" >= document.querySelector(".hair"</span>);
+var caretPos,
+  curEmailIndex,
+  screenCenter,
+  svgCoords,
+  eyeMaxHorizD <span class="cstat-no" title="statement not covered" >= 2</span>0,
+  eyeMaxVertD <span class="cstat-no" title="statement not covered" >= 1</span>0,
+  noseMaxHorizD <span class="cstat-no" title="statement not covered" >= 2</span>3,
+  noseMaxVertD <span class="cstat-no" title="statement not covered" >= 1</span>0,
+  dFromC,
+  eyeDistH,
+  eyeLDistV,
+  eyeRDistV,
+  eyeDistR,
+  mouthStatus <span class="cstat-no" title="statement not covered" >= "small</span>";
+&nbsp;
+function <span class="fstat-no" title="function not covered" >getCoord(</span>e) {
+  var carPos = <span class="cstat-no" title="statement not covered" >email.selectionEnd,</span>
+    div <span class="cstat-no" title="statement not covered" >= document.createElement("div"</span>),
+    span <span class="cstat-no" title="statement not covered" >= document.createElement("span"</span>),
+    copyStyle <span class="cstat-no" title="statement not covered" >= getComputedStyle(email</span>),
+    emailCoords <span class="cstat-no" title="statement not covered" >= {</span>},
+    caretCoords <span class="cstat-no" title="statement not covered" >= {</span>},
+    centerCoords <span class="cstat-no" title="statement not covered" >= {</span>};
+<span class="cstat-no" title="statement not covered" >  [].forEach.call(copyStyle, <span class="fstat-no" title="function not covered" >fu</span>nction(prop) {</span>
+<span class="cstat-no" title="statement not covered" >    div.style[prop] = copyStyle[prop];</span>
+  });
+<span class="cstat-no" title="statement not covered" >  div.style.position = "absolute";</span>
+<span class="cstat-no" title="statement not covered" >  document.body.appendChild(div);</span>
+<span class="cstat-no" title="statement not covered" >  div.textContent = email.value.substr(0, carPos);</span>
+<span class="cstat-no" title="statement not covered" >  span.textContent = email.value.substr(carPos) || ".";</span>
+<span class="cstat-no" title="statement not covered" >  div.appendChild(span);</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  emailCoords = getPosition(email); </span>//console.log("emailCoords.x: " + emailCoords.x + ", emailCoords.y: " + emailCoords.y);
+<span class="cstat-no" title="statement not covered" >  caretCoords = getPosition(span); </span>//console.log("caretCoords.x " + caretCoords.x + ", caretCoords.y: " + caretCoords.y);
+<span class="cstat-no" title="statement not covered" >  centerCoords = getPosition(mySVG); </span>//console.log("centerCoords.x: " + centerCoords.x);
+<span class="cstat-no" title="statement not covered" >  svgCoords = getPosition(mySVG);</span>
+<span class="cstat-no" title="statement not covered" >  screenCenter = centerCoords.x + mySVG.offsetWidth / 2; </span>//console.log("screenCenter: " + screenCenter);
+<span class="cstat-no" title="statement not covered" >  caretPos = caretCoords.x + emailCoords.x; </span>//console.log("caretPos: " + caretPos);
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  dFromC = screenCenter - caretPos; </span>//console.log("dFromC: " + dFromC);
+  var pFromC = <span class="cstat-no" title="statement not covered" >Math.round(caretPos / screenCenter * 100) / 100;</span>
+<span class="cstat-no" title="statement not covered" >  if (pFromC &lt; 1) {</span>
+  } else <span class="cstat-no" title="statement not covered" >if (pFromC &gt; 1) {</span>
+<span class="cstat-no" title="statement not covered" >    pFromC -= 2;</span>
+<span class="cstat-no" title="statement not covered" >    pFromC = Math.abs(pFromC);</span>
+  }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  eyeDistH = -dFromC * 0.05;</span>
+<span class="cstat-no" title="statement not covered" >  if (eyeDistH &gt; eyeMaxHorizD) {</span>
+<span class="cstat-no" title="statement not covered" >    eyeDistH = eyeMaxHorizD;</span>
+  } else <span class="cstat-no" title="statement not covered" >if (eyeDistH &lt; -eyeMaxHorizD) {</span>
+<span class="cstat-no" title="statement not covered" >    eyeDistH = -eyeMaxHorizD;</span>
+  }
+&nbsp;
+  var eyeLCoords = <span class="cstat-no" title="statement not covered" >{ x: svgCoords.x + 84, y: svgCoords.y + 76 };</span>
+  var eyeRCoords = <span class="cstat-no" title="statement not covered" >{ x: svgCoords.x + 113, y: svgCoords.y + 76 };</span>
+  var noseCoords = <span class="cstat-no" title="statement not covered" >{ x: svgCoords.x + 97, y: svgCoords.y + 81 };</span>
+  var mouthCoords = <span class="cstat-no" title="statement not covered" >{ x: svgCoords.x + 100, y: svgCoords.y + 100 };</span>
+  var eyeLAngle = <span class="cstat-no" title="statement not covered" >getAngle(</span>
+    eyeLCoords.x,
+    eyeLCoords.y,
+    emailCoords.x + caretCoords.x,
+    emailCoords.y + 25
+  );
+  var eyeLX = <span class="cstat-no" title="statement not covered" >Math.cos(eyeLAngle) * eyeMaxHorizD;</span>
+  var eyeLY = <span class="cstat-no" title="statement not covered" >Math.sin(eyeLAngle) * eyeMaxVertD;</span>
+  var eyeRAngle = <span class="cstat-no" title="statement not covered" >getAngle(</span>
+    eyeRCoords.x,
+    eyeRCoords.y,
+    emailCoords.x + caretCoords.x,
+    emailCoords.y + 25
+  );
+  var eyeRX = <span class="cstat-no" title="statement not covered" >Math.cos(eyeRAngle) * eyeMaxHorizD;</span>
+  var eyeRY = <span class="cstat-no" title="statement not covered" >Math.sin(eyeRAngle) * eyeMaxVertD;</span>
+  var noseAngle = <span class="cstat-no" title="statement not covered" >getAngle(</span>
+    noseCoords.x,
+    noseCoords.y,
+    emailCoords.x + caretCoords.x,
+    emailCoords.y + 25
+  );
+  var noseX = <span class="cstat-no" title="statement not covered" >Math.cos(noseAngle) * noseMaxHorizD;</span>
+  var noseY = <span class="cstat-no" title="statement not covered" >Math.sin(noseAngle) * noseMaxVertD;</span>
+  var mouthAngle = <span class="cstat-no" title="statement not covered" >getAngle(</span>
+    mouthCoords.x,
+    mouthCoords.y,
+    emailCoords.x + caretCoords.x,
+    emailCoords.y + 25
+  );
+  var mouthX = <span class="cstat-no" title="statement not covered" >Math.cos(mouthAngle) * noseMaxHorizD;</span>
+  var mouthY = <span class="cstat-no" title="statement not covered" >Math.sin(mouthAngle) * noseMaxVertD;</span>
+  var mouthR = <span class="cstat-no" title="statement not covered" >Math.cos(mouthAngle) * 6;</span>
+  var chinX = <span class="cstat-no" title="statement not covered" >mouthX * 0.8;</span>
+  var chinY = <span class="cstat-no" title="statement not covered" >mouthY * 0.5;</span>
+  var chinS = <span class="cstat-no" title="statement not covered" >1 - dFromC * 0.15 / 100;</span>
+<span class="cstat-no" title="statement not covered" >  if (chinS &gt; 1) {</span>
+<span class="cstat-no" title="statement not covered" >    chinS = 1 - (chinS - 1);</span>
+  }
+  var faceX = <span class="cstat-no" title="statement not covered" >mouthX * 0.3;</span>
+  var faceY = <span class="cstat-no" title="statement not covered" >mouthY * 0.4;</span>
+  var faceSkew = <span class="cstat-no" title="statement not covered" >Math.cos(mouthAngle) * 5;</span>
+  var eyebrowSkew = <span class="cstat-no" title="statement not covered" >Math.cos(mouthAngle) * 25;</span>
+  var outerEarX = <span class="cstat-no" title="statement not covered" >Math.cos(mouthAngle) * 4;</span>
+  var outerEarY = <span class="cstat-no" title="statement not covered" >Math.cos(mouthAngle) * 5;</span>
+  var hairX = <span class="cstat-no" title="statement not covered" >Math.cos(mouthAngle) * 6;</span>
+  var hairS = <span class="cstat-no" title="statement not covered" >1.2;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  TweenMax.to(eyeL, 1, { x: -eyeLX, y: -eyeLY, ease: Expo.easeOut });</span>
+<span class="cstat-no" title="statement not covered" >  TweenMax.to(eyeR, 1, { x: -eyeRX, y: -eyeRY, ease: Expo.easeOut });</span>
+<span class="cstat-no" title="statement not covered" >  TweenMax.to(nose, 1, {</span>
+    x: -noseX,
+    y: -noseY,
+    rotation: mouthR,
+    transformOrigin: "center center",
+    ease: Expo.easeOut
+  });
+<span class="cstat-no" title="statement not covered" >  TweenMax.to(mouth, 1, {</span>
+    x: -mouthX,
+    y: -mouthY,
+    rotation: mouthR,
+    transformOrigin: "center center",
+    ease: Expo.easeOut
+  });
+<span class="cstat-no" title="statement not covered" >  TweenMax.to(chin, 1, {</span>
+    x: -chinX,
+    y: -chinY,
+    scaleY: chinS,
+    ease: Expo.easeOut
+  });
+<span class="cstat-no" title="statement not covered" >  TweenMax.to(face, 1, {</span>
+    x: -faceX,
+    y: -faceY,
+    skewX: -faceSkew,
+    transformOrigin: "center top",
+    ease: Expo.easeOut
+  });
+<span class="cstat-no" title="statement not covered" >  TweenMax.to(eyebrow, 1, {</span>
+    x: -faceX,
+    y: -faceY,
+    skewX: -eyebrowSkew,
+    transformOrigin: "center top",
+    ease: Expo.easeOut
+  });
+<span class="cstat-no" title="statement not covered" >  TweenMax.to(outerEarL, 1, {</span>
+    x: outerEarX,
+    y: -outerEarY,
+    ease: Expo.easeOut
+  });
+<span class="cstat-no" title="statement not covered" >  TweenMax.to(outerEarR, 1, { x: outerEarX, y: outerEarY, ease: Expo.easeOut });</span>
+<span class="cstat-no" title="statement not covered" >  TweenMax.to(earHairL, 1, {</span>
+    x: -outerEarX,
+    y: -outerEarY,
+    ease: Expo.easeOut
+  });
+<span class="cstat-no" title="statement not covered" >  TweenMax.to(earHairR, 1, { x: -outerEarX, y: outerEarY, ease: Expo.easeOut });</span>
+<span class="cstat-no" title="statement not covered" >  TweenMax.to(hair, 1, {</span>
+    x: hairX,
+    scaleY: hairS,
+    transformOrigin: "center bottom",
+    ease: Expo.easeOut
+  });
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  document.body.removeChild(div);</span>
+}
+&nbsp;
+function <span class="fstat-no" title="function not covered" >onEmailInput(</span>e) {
+<span class="cstat-no" title="statement not covered" >  getCoord(e);</span>
+  var value = <span class="cstat-no" title="statement not covered" >e.target.value;</span>
+<span class="cstat-no" title="statement not covered" >  curEmailIndex = value.length;</span>
+&nbsp;
+  // very crude email validation for now to trigger effects
+<span class="cstat-no" title="statement not covered" >  if (curEmailIndex &gt; 0) {</span>
+<span class="cstat-no" title="statement not covered" >    if (mouthStatus == "small") {</span>
+<span class="cstat-no" title="statement not covered" >      mouthStatus = "medium";</span>
+<span class="cstat-no" title="statement not covered" >      TweenMax.to([mouthBG, mouthOutline, mouthMaskPath], 1, {</span>
+        morphSVG: mouthMediumBG,
+        shapeIndex: 8,
+        ease: Expo.easeOut
+      });
+<span class="cstat-no" title="statement not covered" >      TweenMax.to(tooth, 1, { x: 0, y: 0, ease: Expo.easeOut });</span>
+<span class="cstat-no" title="statement not covered" >      TweenMax.to(tongue, 1, { x: 0, y: 1, ease: Expo.easeOut });</span>
+<span class="cstat-no" title="statement not covered" >      TweenMax.to([eyeL, eyeR], 1, {</span>
+        scaleX: 0.85,
+        scaleY: 0.85,
+        ease: Expo.easeOut
+      });
+    }
+<span class="cstat-no" title="statement not covered" >    if (value.includes("@")) {</span>
+<span class="cstat-no" title="statement not covered" >      mouthStatus = "large";</span>
+<span class="cstat-no" title="statement not covered" >      TweenMax.to([mouthBG, mouthOutline, mouthMaskPath], 1, {</span>
+        morphSVG: mouthLargeBG,
+        ease: Expo.easeOut
+      });
+<span class="cstat-no" title="statement not covered" >      TweenMax.to(tooth, 1, { x: 3, y: -2, ease: Expo.easeOut });</span>
+<span class="cstat-no" title="statement not covered" >      TweenMax.to(tongue, 1, { y: 2, ease: Expo.easeOut });</span>
+<span class="cstat-no" title="statement not covered" >      TweenMax.to([eyeL, eyeR], 1, {</span>
+        scaleX: 0.65,
+        scaleY: 0.65,
+        ease: Expo.easeOut,
+        transformOrigin: "center center"
+      });
+    } else {
+<span class="cstat-no" title="statement not covered" >      mouthStatus = "medium";</span>
+<span class="cstat-no" title="statement not covered" >      TweenMax.to([mouthBG, mouthOutline, mouthMaskPath], 1, {</span>
+        morphSVG: mouthMediumBG,
+        ease: Expo.easeOut
+      });
+<span class="cstat-no" title="statement not covered" >      TweenMax.to(tooth, 1, { x: 0, y: 0, ease: Expo.easeOut });</span>
+<span class="cstat-no" title="statement not covered" >      TweenMax.to(tongue, 1, { x: 0, y: 1, ease: Expo.easeOut });</span>
+<span class="cstat-no" title="statement not covered" >      TweenMax.to([eyeL, eyeR], 1, {</span>
+        scaleX: 0.85,
+        scaleY: 0.85,
+        ease: Expo.easeOut
+      });
+    }
+  } else {
+<span class="cstat-no" title="statement not covered" >    mouthStatus = "small";</span>
+<span class="cstat-no" title="statement not covered" >    TweenMax.to([mouthBG, mouthOutline, mouthMaskPath], 1, {</span>
+      morphSVG: mouthSmallBG,
+      shapeIndex: 9,
+      ease: Expo.easeOut
+    });
+<span class="cstat-no" title="statement not covered" >    TweenMax.to(tooth, 1, { x: 0, y: 0, ease: Expo.easeOut });</span>
+<span class="cstat-no" title="statement not covered" >    TweenMax.to(tongue, 1, { y: 0, ease: Expo.easeOut });</span>
+<span class="cstat-no" title="statement not covered" >    TweenMax.to([eyeL, eyeR], 1, { scaleX: 1, scaleY: 1, ease: Expo.easeOut });</span>
+  }
+}
+&nbsp;
+function <span class="fstat-no" title="function not covered" >onEmailFocus(</span>e) {
+<span class="cstat-no" title="statement not covered" >  e.target.parentElement.classList.add("focusWithText");</span>
+<span class="cstat-no" title="statement not covered" >  getCoord();</span>
+}
+&nbsp;
+function <span class="fstat-no" title="function not covered" >onEmailBlur(</span>e) {
+<span class="cstat-no" title="statement not covered" >  if (e.target.value == "") {</span>
+<span class="cstat-no" title="statement not covered" >    e.target.parentElement.classList.remove("focusWithText");</span>
+  }
+<span class="cstat-no" title="statement not covered" >  resetFace();</span>
+}
+&nbsp;
+function <span class="fstat-no" title="function not covered" >onPasswordFocus(</span>e) {
+<span class="cstat-no" title="statement not covered" >  coverEyes();</span>
+}
+&nbsp;
+function <span class="fstat-no" title="function not covered" >onPasswordBlur(</span>e) {
+<span class="cstat-no" title="statement not covered" >  uncoverEyes();</span>
+}
+&nbsp;
+function <span class="fstat-no" title="function not covered" >coverEyes(</span>) {
+<span class="cstat-no" title="statement not covered" >  TweenMax.to(armL, 0.45, { x: -93, y: 2, rotation: 0, ease: Quad.easeOut });</span>
+<span class="cstat-no" title="statement not covered" >  TweenMax.to(armR, 0.45, {</span>
+    x: -93,
+    y: 2,
+    rotation: 0,
+    ease: Quad.easeOut,
+    delay: 0.1
+  });
+}
+&nbsp;
+function <span class="fstat-no" title="function not covered" >uncoverEyes(</span>) {
+<span class="cstat-no" title="statement not covered" >  TweenMax.to(armL, 1.35, { y: 220, ease: Quad.easeOut });</span>
+<span class="cstat-no" title="statement not covered" >  TweenMax.to(armL, 1.35, { rotation: 105, ease: Quad.easeOut, delay: 0.1 });</span>
+<span class="cstat-no" title="statement not covered" >  TweenMax.to(armR, 1.35, { y: 220, ease: Quad.easeOut });</span>
+<span class="cstat-no" title="statement not covered" >  TweenMax.to(armR, 1.35, { rotation: -105, ease: Quad.easeOut, delay: 0.1 });</span>
+}
+&nbsp;
+function <span class="fstat-no" title="function not covered" >resetFace(</span>) {
+<span class="cstat-no" title="statement not covered" >  TweenMax.to([eyeL, eyeR], 1, { x: 0, y: 0, ease: Expo.easeOut });</span>
+<span class="cstat-no" title="statement not covered" >  TweenMax.to(nose, 1, {</span>
+    x: 0,
+    y: 0,
+    scaleX: 1,
+    scaleY: 1,
+    ease: Expo.easeOut
+  });
+<span class="cstat-no" title="statement not covered" >  TweenMax.to(mouth, 1, { x: 0, y: 0, rotation: 0, ease: Expo.easeOut });</span>
+<span class="cstat-no" title="statement not covered" >  TweenMax.to(chin, 1, { x: 0, y: 0, scaleY: 1, ease: Expo.easeOut });</span>
+<span class="cstat-no" title="statement not covered" >  TweenMax.to([face, eyebrow], 1, { x: 0, y: 0, skewX: 0, ease: Expo.easeOut });</span>
+<span class="cstat-no" title="statement not covered" >  TweenMax.to([outerEarL, outerEarR, earHairL, earHairR, hair], 1, {</span>
+    x: 0,
+    y: 0,
+    scaleY: 1,
+    ease: Expo.easeOut
+  });
+}
+&nbsp;
+function <span class="fstat-no" title="function not covered" >getAngle(</span>x1, y1, x2, y2) {
+  var angle = <span class="cstat-no" title="statement not covered" >Math.atan2(y1 - y2, x1 - x2);</span>
+<span class="cstat-no" title="statement not covered" >  return angle;</span>
+}
+&nbsp;
+function <span class="fstat-no" title="function not covered" >getPosition(</span>el) {
+  var xPos = <span class="cstat-no" title="statement not covered" >0;</span>
+  var yPos = <span class="cstat-no" title="statement not covered" >0;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  while (el) {</span>
+<span class="cstat-no" title="statement not covered" >    if (el.tagName == "BODY") {</span>
+      // deal with browser quirks with body/window/document and page scroll
+      var xScroll = <span class="cstat-no" title="statement not covered" >el.scrollLeft || document.documentElement.scrollLeft;</span>
+      var yScroll = <span class="cstat-no" title="statement not covered" >el.scrollTop || document.documentElement.scrollTop;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >      xPos += el.offsetLeft - xScroll + el.clientLeft;</span>
+<span class="cstat-no" title="statement not covered" >      yPos += el.offsetTop - yScroll + el.clientTop;</span>
+    } else {
+      // for all other non-BODY elements
+<span class="cstat-no" title="statement not covered" >      xPos += el.offsetLeft - el.scrollLeft + el.clientLeft;</span>
+<span class="cstat-no" title="statement not covered" >      yPos += el.offsetTop - el.scrollTop + el.clientTop;</span>
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    el = el.offsetParent;</span>
+  }
+<span class="cstat-no" title="statement not covered" >  return {</span>
+    x: xPos,
+    y: yPos
+  };
+}
+&nbsp;
+<span class="cstat-no" title="statement not covered" >email.addEventListener("focus", onEmailFocus);</span>
+<span class="cstat-no" title="statement not covered" >email.addEventListener("blur", onEmailBlur);</span>
+<span class="cstat-no" title="statement not covered" >email.addEventListener("input", onEmailInput);</span>
+<span class="cstat-no" title="statement not covered" >password.addEventListener("focus", onPasswordFocus);</span>
+<span class="cstat-no" title="statement not covered" >password.addEventListener("blur", onPasswordBlur);</span>
+<span class="cstat-no" title="statement not covered" >TweenMax.set(armL, {</span>
+  x: -93,
+  y: 220,
+  rotation: 105,
+  transformOrigin: "top left"
+});
+<span class="cstat-no" title="statement not covered" >TweenMax.set(armR, {</span>
+  x: -93,
+  y: 220,
+  rotation: -105,
+  transformOrigin: "top right"
+});
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Tue Mar 20 2018 19:24:28 GMT-0700 (PDT)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

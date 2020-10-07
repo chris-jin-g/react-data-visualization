@@ -1,0 +1,9 @@
+{
+  "reactdatavisualization": {
+    "server": {
+      "env": {
+        "dark_sky_secret_key": "3c99573d76de24e9217003ad52e02ec5"
+      }
+    }
+  }
+}
